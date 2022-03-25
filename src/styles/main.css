@@ -1,0 +1,122 @@
+
+#page_home * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato;
+}
+
+#page_home .container {
+
+    display: flex;
+    width: 100%;
+}
+
+#page_home .flowers {
+    width: 100%;
+    height: 100vh;
+}
+
+#page_home img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+#page_home .gray-box {
+    background-color: #afcdc4;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+#page_home .navbar-light {
+    color: white;
+}
+#page_home .text {
+    color: white;
+    font-size: 10em;
+    font-weight: 700;
+    position: relative;
+    top: 2em;
+    left: -2.05em; 
+    background: transparent;
+}
+#page_home .opacity{
+    color: white;
+}
+#page_home .hintergrund-img {
+background: url("../assets/unsplash.jpg") no-repeat center center;
+background-size: cover;
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+
+}
+
+#page_home .intro-text {
+    z-index: 5;
+    color: white;
+    width: 450px;
+    position: relative;
+    bottom: 25em;
+    left: 5em;
+}
+
+#page_home h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+}
+
+
+#page_home .social-nav a {
+    color: white;
+    position: relative;
+    bottom: 75em;
+    left: 9em;
+}
+
+#page_home .fab {
+    margin-right: 1.5em;
+}
+
+#page_home .number-nav {
+    z-index: 1;
+    position: relative;
+    bottom: 6em;
+    color: white;
+    opacity: 0.5;
+    font-size: 5em;
+    font-weight: 700;
+}
+
+
+#page_home .arrow-nav {
+    text-decoration: none;
+   
+}
+
+#page_home .arrowNavUp, .arrowNavDown{
+    color: white;
+    font-size: 20em;
+}
+
+#page_home .number {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5em;
+}
+
+#page_home .arrow {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 125em;
+    left: 3em;
+    font-size: .25em;
+   
+}
+
+
+
