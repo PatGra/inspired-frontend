@@ -1,7 +1,8 @@
-import icons from "../functions/icons";
+
 import "../styles/main3.css";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Button from "./Button";
 
 
 import {
@@ -30,8 +31,10 @@ function Register() {
       body: JSON.stringify({
         projectName: e.target.projectName.value,
         author: e.target.author.value,
+        day: e.target.day.value,
         password: e.target.password.value,
         description: e.target.description.value,
+        measurement: e.target.measurement.value,
       }),
     });
     //const content = await rawResponse.json();
@@ -79,14 +82,14 @@ function Register() {
                               class="accordion--form__text required"
                               type="text"
                               name="projectName"
-                              id="name"
+                              id="projectName"
                               placeholder="Name"
                               required
                             />
                           </div>
 
                           <div class="accordion--form__row">
-                            <label class="accordion--form__label" for="suname">
+                            <label class="accordion--form__label" for="author">
                               Author*
                             </label>{" "}
                             <br />
@@ -94,31 +97,31 @@ function Register() {
                               class="accordion--form__text required"
                               type="text"
                               name="author"
-                              id="surname"
+                              id="author"
                               placeholder="Name"
                               required
                             />
                           </div>
 
                           <div class="accordion--form__row">
-                            <label class="accordion--form__label" for="suname">
+                            <label class="accordion--form__label" for="measurement">
                               Measurement
                             </label>{" "}
                             <br />
                             <input
                               class="accordion--form__text required addValue"
                               type="text"
-                              name="surname"
-                              id="surname"
+                              name="measurement"
+                              id="measurement"
                               placeholder="Value"
-                              required
+                             
                             />
                           </div>
 
                           <div class="accordion--form__row">
                             <label
                               class="accordion--form__label"
-                              for="birthday"
+                              for="day"
                             >
                               Start Date
                             </label>{" "}
@@ -126,14 +129,14 @@ function Register() {
                             <input
                               class="accordion--form__text"
                               type="text"
-                              name="birthday"
-                              id="birthday"
+                              name="day"
+                              id="day"
                               placeholder="Day"
-                              required
+                              
                             />
                           </div>
                           <div class="accordion--form__row">
-                            <label class="accordion--form__label" for="suname">
+                            <label class="accordion--form__label" for="password">
                               Password*
                             </label>{" "}
                             <br />
@@ -216,8 +219,12 @@ function Register() {
           </div>
         </div>
       </div>
+      <footer>
+    <Button/>
+    </footer>
     </div>
   );
+  
 }
 
 export default Register;

@@ -40,7 +40,7 @@
     font-weight: 700;
     position: relative;
     top: 2em;
-    left: -2.05em; 
+    left: -2.75em; 
     background: transparent;
 }
 #page_home .opacity{
@@ -60,7 +60,10 @@ background-size: cover;
     width: 450px;
     position: relative;
     bottom: 25em;
-    left: 5em;
+    left: 17em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #page_home h2 {
@@ -68,7 +71,10 @@ background-size: cover;
     font-weight: 700;
     color: white;
 }
-
+#page_home .textP{
+    display: flex;
+    justify-content: flex-start;  
+}
 
 #page_home .social-nav a {
     color: white;
@@ -114,7 +120,7 @@ background-size: cover;
     position: relative;
     bottom: 125em;
     left: 3em;
-    font-size: .25em;
+    font-size: .23em;
    
 }
 

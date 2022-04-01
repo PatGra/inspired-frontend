@@ -166,7 +166,7 @@
   width: 100%;
 }
 
- #page_register-login .accordion--form__legend-active {
+ /*#page_register-login .accordion--form__legend-active {
   background-color: #ccc;
   color: #555;
 }

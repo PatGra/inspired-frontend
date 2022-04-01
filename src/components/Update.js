@@ -3,6 +3,7 @@ import '../styles/main4.css'
 import React from 'react';
 
 
+
 import {
     Accordion,
     AccordionItem,
@@ -14,13 +15,14 @@ import {
 
 // Demo styles, see 'Styles' section below for some notes on use.
 import 'react-accessible-accordion/dist/fancy-example.css';
+import { Button } from 'bootstrap';
 
 
 function Update(){
 
     async function update(e) {
         e.preventDefault();
-        const rawResponse = await fetch(`${process.env.REACT_APP_URI}/update`, {
+        const rawResponse = await fetch(`${process.env.REACT_APP_URI}/update/${e.target.projectName.value}`, {
           method: 'PUT',
           headers: {
           'Accept': 'application/json',
@@ -30,7 +32,7 @@ function Update(){
             projectName: e.target.projectName.value,
             author: e.target.author.value,
             measurement: e.target.measurement.value,
-            start: e.target.start.value,
+            day: e.target.day.value,
             description: e.target.description.value,
             documentation: e.target.documentation.value,  
           })
@@ -63,23 +65,23 @@ function Update(){
                         <div class="accordion--form__wrapper accordion--form__wrapper-active">
                   
                           <div class="accordion--form__row">
-                            <label class="accordion--form__label" for="name"> Project Name</label> <br />
-                            <input class="accordion--form__text required" type="text" name="projectName" id="name" placeholder="Name" required/>
+                            <label class="accordion--form__label" for="projectName"> Project Name</label> <br />
+                            <input class="accordion--form__text required" type="text" name="projectName" id="projectName" placeholder="Name" required/>
                           </div>
                   
                           <div class="accordion--form__row">
-                            <label class="accordion--form__label" for="suname">Author</label> <br />
-                            <input class="accordion--form__text required" type="text" name="author" id="surname" placeholder="Name" required/>
+                            <label class="accordion--form__label" for="author">Author</label> <br />
+                            <input class="accordion--form__text required" type="text" name="author" id="author" placeholder="Name"/>
                           </div>
                   
                           <div class="accordion--form__row">
-                            <label class="accordion--form__label" for="suname">Measurement</label> <br />
-                            <input class="accordion--form__text required addValue" type="text" name="measurement" id="surname" placeholder="Value" required/>
+                            <label class="accordion--form__label" for="measurement">Measurement</label> <br />
+                            <input class="accordion--form__text required addValue" type="text" name="measurement" id="measurement" placeholder="Value" />
                           </div>
   
                           <div class="accordion--form__row">
-                            <label class="accordion--form__label" for="birthday">Start Date</label> <br />
-                            <input class="accordion--form__text" type="text" name="start" id="birthday" placeholder="Day" required/>
+                            <label class="accordion--form__label" for="day">Start Date</label> <br />
+                            <input class="accordion--form__text" type="text" name="day" id="day" placeholder="Day" />
                           </div>
                           
                  </div>
@@ -101,7 +103,7 @@ function Update(){
                   
                           <div class="accordion--form__row">
                            
-                            <textarea class="accordion--form__textarea required" name="description" id="biography" placeholder="Project Details" required></textarea>
+                            <textarea class="accordion--form__textarea required" name="description" id="description" placeholder="Project Details" ></textarea>
                           </div>
                   
                         </div>
@@ -114,7 +116,7 @@ function Update(){
                   
                           <div class="accordion--form__row">
                             
-                            <textarea class="accordion--form__textarea required" name="documentation" id="biography" placeholder="Project Details" required></textarea>
+                            <textarea class="accordion--form__textarea required" name="documentation" id="documentation" placeholder="Project Details" ></textarea>
                           </div>
                         </div>
                       </fieldset>
@@ -124,13 +126,15 @@ function Update(){
             </AccordionItem>
         </Accordion>
             <fieldset class="accordion--form__fieldset" id="fieldset-three">
-                <legend class="accordion--form__legend">Add</legend>
+                
                 <div class="accordion--form__row">
                         <input class="accordion--form__submit" type="submit" name="submit" value="Submit"/>
                 </div>
             </fieldset>
         </div>
         </div>
+
+
         </div>
     );
 }

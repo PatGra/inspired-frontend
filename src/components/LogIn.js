@@ -1,6 +1,7 @@
 import icons from "../functions/icons";
 import '../styles/main3.css'
 import { useNavigate } from "react-router-dom";
+import Button from "./Button";
 
 
 function LogIn(){
@@ -78,19 +79,8 @@ function LogIn(){
     </div>
 
     <footer>
-        <div class="arrow">
-            <div class="arrow">
-                <a class="arrow-nav up" href="./index2.html"><i class="fas fa-chevron-left"></i>
-                </a>
-                <a class="number-nav" href="">Projects</a>
-                <a class="arrow-nav down" href="./index5.html"><i class="fas fa-chevron-right"></i>
-                </a>
-            </div>
-        </div>
-    
-
-
-</footer>
+    <Button/>
+    </footer>
 
         </div>
     )

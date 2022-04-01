@@ -1,7 +1,18 @@
 import icons from "../functions/icons";
-import '../styles/main2.css'
+import '../styles/main2.css';
+import { useNavigate } from "react-router-dom";
 
 function About(){
+    const navigate = useNavigate();
+
+
+    function goToRegister(){
+        navigate("/register")
+    }
+    function goToLogin(){
+        navigate("/login")
+    }
+
     return(
     <div id='page_about'>
         <div>
@@ -30,14 +41,14 @@ function About(){
 
 
 
-                    <h3> <a href="">New Project</a></h3>
+                    <h3> <a href="" onClick={goToRegister}>New Project</a></h3>
                     <p>Create new projects here.</p>
                    
                 </div>
 
                 <div className="text">
                
-                    <h3> <a href="">Update Projects</a></h3>
+                    <h3> <a href=""onClick={goToLogin}>Update Projects</a></h3>
                     <p>You want to continue working on your project?
                     Here you can access the database.</p>
                  
